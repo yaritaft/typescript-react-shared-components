@@ -1,5 +1,9 @@
 import React from 'react';
 
-export default function Text() {
-    return <h1>Hello</h1>;
+interface Properties {
+  num: number;
+}
+
+export default function Text(props: Properties) {
+    return <h1>Hello {props.num}</h1>;
   }
