@@ -13,6 +13,5 @@ yarn-error.log*
 /.changelog
 .npm/
 yarn.lock
-.npmrc
 .npmrc2
 dist/
