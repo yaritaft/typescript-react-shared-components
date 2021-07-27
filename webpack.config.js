@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [new CleanWebpackPlugin()],
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
   },
   module: {
     rules: [
@@ -23,7 +23,26 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass"),
+              sassOptions: {
+                fiber: false,
+              },
+            },
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+        ],
         include: path.resolve(__dirname, "./src"),
       },
     ],

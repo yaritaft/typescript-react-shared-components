@@ -1,0 +1,14 @@
+.text {
+  font-family: "Lato";
+  font-size: small;
+}
+
+.radio-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btn-selected {
+  box-shadow: inset 0px -3px 0px #0063ff;
+}
